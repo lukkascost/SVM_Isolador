@@ -23,10 +23,14 @@ for i,j in enumerate(Treino):
         TreinoLabel.append(Treino[i][-1])
         del Treino[i][-1]
 
+#cv2.TERM_CRITERIA_MAX_ITER = 10
 
 svm_params = dict(kernel_type = cv2.SVM_LINEAR,
                   svm_type = cv2.SVM_C_SVC,
-                  C=9)
+                  C=9,
+                  term_crit = (cv2.TERM_CRITERIA_MAX_ITER, 1,  1.1920928955078125e-07)
+                  
+                  )
 svm = cv2.SVM()
 svm.train(np.float32(Treino),np.float32(TreinoLabel),params = svm_params)
 acerto = 0
