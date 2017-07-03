@@ -28,18 +28,17 @@ for i,j in enumerate(Treino):
 svm_params = dict(kernel_type = cv2.SVM_LINEAR,
                   svm_type = cv2.SVM_C_SVC,
                   C=9,
-                  term_crit = (cv2.TERM_CRITERIA_MAX_ITER, 1,  1.1920928955078125e-07)
-                  
+                  term_crit = (cv2.TERM_CRITERIA_MAX_ITER, 1, 1e-16)
                   )
 svm = cv2.SVM()
 svm.train(np.float32(Treino),np.float32(TreinoLabel),params = svm_params)
 acerto = 0
 total= 0
-svm.save("Vetores_svm.txt")
+#svm.save("Vetores_svm.txt")
 for i,j in enumerate(Teste):
         total+=1
         resultado_medido = svm.predict(np.float32(j))
         resultado_real = TesteLabel[i]
         if(resultado_medido==resultado_real):
                 acerto+=1
-print acerto/total
+print float(acerto)/float(total)
