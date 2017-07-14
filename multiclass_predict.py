@@ -12,9 +12,9 @@ def ler_arquivo(address):
                         if(len(attr)>=1): bd[obj].append(float(attr))   ##
                 obj = obj+1                                             ##
         return bd  
-qtc = 2
+qtc = 5
 maior = 0.80
-clss = [2,3]
+clss = [0,1,2,3,4]
 tamanhos = np.zeros(qtc)
 Teste = []
 for j,i in enumerate(clss):
