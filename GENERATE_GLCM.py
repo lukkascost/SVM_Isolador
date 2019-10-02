@@ -9,8 +9,8 @@ MAX_BITS = 8
 MIN_DECIMATION = 1
 MAX_DECIMATION = 1
 
-PATH_TO_IMAGES_FOLDER = 'D:/Repository/isolador-multiclasse/base/tempo/filtrado_lucas/Won_data_8b/'
-PATH_TO_SAVE_FEATURES = 'GLCM_FILES/EXP_01/'
+PATH_TO_IMAGES_FOLDER = 'D:/Repository/isolador-multiclasse/base/tempo/filtrado_lucas/time-frequency/'
+PATH_TO_SAVE_FEATURES = 'GLCM_FILES/EXP_02/'
 
 for nbits in range(MIN_BITS, MAX_BITS + 1):
     for k in range(MIN_DECIMATION, MAX_DECIMATION + 1):
